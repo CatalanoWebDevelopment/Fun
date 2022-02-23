@@ -4,15 +4,17 @@ import CurrencyConverterInputRow from "./CurrencyConverterInputRows";
 import { CurrencyConversionService } from "../../Services/CurrencyConverterService";
 
 const CurrencyConverterContainer = () => {
-  const currencyService = new CurrencyConversionService();
+  
 
-  const [currencyAmount1, setCurrencyAmount1] = React.useState<number>();
-  const [currencyAmount2, setCurrencyAmount2] = React.useState<number>();
+  const [currencyAmount1, setCurrencyAmount1] = React.useState();
+  const [currencyAmount2, setCurrencyAmount2] = React.useState();
 
-  const [currencyType1, setCurrencyType1] = React.useState<string>();
-  const [currencyType2, setCurrencyType2] = React.useState<string>();
+  const [currencyType1, setCurrencyType1] = React.useState();
+  const [currencyType2, setCurrencyType2] = React.useState();
 
   React.useEffect(() => {
+    const currencyService = new CurrencyConversionService();
+
     if (
       !Number.isNaN(currencyAmount1) &&
       currencyAmount1 &&

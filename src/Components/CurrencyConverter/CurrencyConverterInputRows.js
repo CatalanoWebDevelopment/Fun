@@ -3,14 +3,7 @@ import React from "react";
 
 export const Currencies = ["USD", "CAD", "GBP", "EUR"];
 
-interface ICurrencyConverterRowProps {
-  inputValue: number;
-  inputOnChange: any;
-  selectValue: string;
-  selectOnChange: any;
-}
-
-const CurrencyConverterInputRow: React.FC<ICurrencyConverterRowProps> = ({
+const CurrencyConverterInputRow = ({
   inputValue,
   inputOnChange,
   selectValue,
