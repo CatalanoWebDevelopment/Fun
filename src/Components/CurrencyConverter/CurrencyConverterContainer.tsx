@@ -12,20 +12,20 @@ const CurrencyConverterContainer = () => {
   const [currencyType1, setCurrencyType1] = React.useState<string>();
   const [currencyType2, setCurrencyType2] = React.useState<string>();
 
-  //   React.useEffect(() => {
-  //     if (
-  //       !Number.isNaN(currencyAmount1) &&
-  //       currencyAmount1 &&
-  //       currencyType1 &&
-  //       currencyType2
-  //     ) {
-  //       currencyService.getCurrencyConversion(
-  //         currencyAmount1,
-  //         currencyType1,
-  //         currencyType2
-  //       );
-  //     }
-  //   }, [currencyAmount1, currencyType1, currencyAmount2, currencyType2]);
+  React.useEffect(() => {
+    if (
+      !Number.isNaN(currencyAmount1) &&
+      currencyAmount1 &&
+      currencyType1 &&
+      currencyType2
+    ) {
+      currencyService.getCurrencyConversion(
+        currencyAmount1,
+        currencyType1,
+        currencyType2
+      );
+    }
+  }, [currencyAmount1, currencyType1, currencyAmount2, currencyType2]);
 
   return (
     <React.Fragment>
