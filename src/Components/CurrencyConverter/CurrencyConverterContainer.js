@@ -3,9 +3,8 @@ import { Grid } from "@mui/material";
 import CurrencyConverterInputRow from "./CurrencyConverterInputRows";
 import { CurrencyConversionService } from "../../Services/CurrencyConverterService";
 
-const CurrencyConverterContainer = () => {
-  
 
+const CurrencyConverterContainer = () => {
   const [currencyAmount1, setCurrencyAmount1] = React.useState();
   const [currencyAmount2, setCurrencyAmount2] = React.useState();
 
@@ -30,7 +29,7 @@ const CurrencyConverterContainer = () => {
   }, [currencyAmount1, currencyType1, currencyAmount2, currencyType2]);
 
   return (
-    <React.Fragment>
+    <div>
       <Grid container item xs={12}>
         <CurrencyConverterInputRow
           inputValue={currencyAmount1}
@@ -48,7 +47,7 @@ const CurrencyConverterContainer = () => {
           selectOnChange={setCurrencyType2}
         />
       </Grid>
-    </React.Fragment>
+    </div>
   );
 };
 
